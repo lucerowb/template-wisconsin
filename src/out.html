@@ -1,0 +1,179 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="p-2">
+      <div class="flex justify-between">
+        <div class="flex gap-4">
+          <h2 class="text-3xl font-bold">
+            Wisconsin Voter Registration Application
+          </h2>
+          <p class="text-sm">
+            please complete legibly
+            <br />Additional Instructions on reverse
+          </p>
+        </div>
+        <p class="text-sm">
+          please return your completed form to <br />your municipal clerk
+        </p>
+      </div>
+      <table class="border-2 border-black w-full">
+        <tr class="border-b-2 border-black">
+          <td class="flex flex-col items-center justify-center text-center">
+            <h3 class="text-xl font-bold">Qualifications</h3>
+            <p class="text-sm">please check each box if</p>
+            <span class="font-semibold underline">You:</span>
+          </td>
+          <td
+            class="border-2 border-black bg-gray-500 text-white w-5 text-center text-xl"
+          >
+            1
+          </td>
+          <td class="p-2">
+            <p>if you cannot check every box, do NOT complete this form</p>
+            <div class="flex">
+              <div class="flex flex-col flex-1">
+                <label for="q1" class="text-sm flex-1">
+                  <input type="checkbox" name="q1" id="q1" />
+                  Are you citizen of US
+                </label>
+                <label for="q2" class="text-sm flex-1">
+                  <input type="checkbox" name="q2" id="q2" />
+                  Will be at least 18 years old on or before Election Day
+                </label>
+              </div>
+              <div class="flex flex-col flex-1">
+                <label for="q3" class="text-sm flex-1">
+                  <input type="checkbox" name="q3" id="q3" />
+                  Have resided at the address provided below for at least 28
+                  consecutive days prior to the election and do not currently
+                  intend to move
+                </label>
+                <label for="q4" class="text-sm flex-1">
+                  <input type="checkbox" name="q4" id="q4" />
+                  Are not currently serving a sentence including incarceration,
+                  parole, probation, or extended supervision for a felony
+                  conviction
+                </label>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="border-b-2 border-black">
+          <td class="flex flex-col items-center justify-center text-center">
+            <h3 class="text-xl font-bold">Your Name</h3>
+          </td>
+          <td
+            class="border-2 border-black bg-gray-500 text-white w-5 text-center text-xl"
+          >
+            2
+          </td>
+          <td class="p-2">
+            <div class="flex justify-between items-center">
+              <p class="">Last <span class="underline">{{lastName}}</span></p>
+              <p class="">
+                Suffix (Jr., II, etc.)
+                <span class="underline">{{suffix}}</span>
+              </p>
+            </div>
+            <div class="flex justify-between items-center">
+              <p class="">First <span class="underline">{{firstName}}</span></p>
+              <p class="">
+                Middle
+                <span class="underline">{{middleName}}</span>
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr class="border-b-2 border-black">
+          <td class="flex flex-col items-center justify-center text-center">
+            <h3 class="text-xl font-bold">About You</h3>
+            <p class="text-sm">phone number and email are</p>
+            <span class="font-semibold">optional</span>
+          </td>
+          <td
+            class="border-2 border-black bg-gray-500 text-white w-5 text-center text-xl"
+          >
+            3
+          </td>
+          <td class="p-2 flex h-max">
+            <div class="flex-1">
+              <p>Date of Birth (MM/DD/YYY)</p>
+              <p class="underline">{{dob}}</p>
+            </div>
+            <div class="flex flex-col justify-between flex-1">
+              <p class="">
+                Phone Number <span class="underline">{{phoneNumber}}</span>
+              </p>
+              <p class="">
+                Email Address <span class="underline">{{email}}</span>
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr class="border-b-2 border-black">
+          <td class="flex flex-col items-center justify-center text-center">
+            <h3 class="text-xl font-bold">The Address Where You Live</h3>
+            <p class="text-sm">
+              your residential voting address,<br />
+              which cannot be a P.O. Box
+            </p>
+            <span class="font-semibold"
+              >if you do not have a street address, <br />please use the map on
+              the back of <br />this form</span
+            >
+          </td>
+          <td
+            class="border-2 border-black bg-gray-500 text-white w-5 text-center text-xl"
+          >
+            4
+          </td>
+          <td class="p-2">
+            <div class="flex justify-between items-center">
+              <p class="">
+                Street Address <span class="underline">{{streetAddress}}</span>
+              </p>
+              <p class="">
+                Apt/Room #
+                <span class="underline">{{aptNo}}</span>
+              </p>
+            </div>
+            <div class="flex justify-between items-center">
+              <p class="">
+                City/Town/Village of <span class="underline">{{city}}</span>
+              </p>
+              <p class="underline">WI</p>
+              <p class="">Zip <span class="underline">{{zip}}</span></p>
+            </div>
+            <div class="flex justify-between items-center">
+              <p class="">
+                Mailing Municipality<br />
+                (if different)
+                <span class="underline">{{mailingMunicipality}}</span>
+              </p>
+              <p class="">
+                Middle
+                <span class="underline">{{middleName}}</span>
+              </p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

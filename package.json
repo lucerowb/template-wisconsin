@@ -1,0 +1,26 @@
+{
+  "name": "template-pdf",
+  "version": "1.0.0",
+  "description": "make a pdf out of the template",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "pdf",
+    "template"
+  ],
+  "author": "Srijan Bajracharya",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "handlebars": "^4.7.7",
+    "puppeteer": "^19.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
